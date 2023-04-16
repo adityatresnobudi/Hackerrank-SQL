@@ -7,7 +7,7 @@ SELECT
     SUM(total_views) AS total_views,
     SUM(total_unique_views) AS total_unique_views
 FROM
-    contest AS a
+    contests AS a
 LEFT JOIN colleges AS b ON a.contest_id = b.contest_id
 LEFT JOIN challenges AS c ON b.college_id = c.college_id 
 LEFT JOIN (SELECT challenge_id, SUM(total_views) AS total_views, 
